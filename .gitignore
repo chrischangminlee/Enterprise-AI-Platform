@@ -13,4 +13,9 @@ venv/
 *.iml
 
 # 기타
-*.log 
+*.log
+
+# PDF 파일 및 데이터 디렉토리
+*.pdf
+admin_pdfs/
+db/ 
