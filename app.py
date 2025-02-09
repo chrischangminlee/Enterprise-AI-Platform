@@ -1,11 +1,11 @@
 from flask import Flask, request, jsonify
 from dotenv import load_dotenv
 import os
-from langchain.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import Chroma
-from langchain.llms import OpenAI
+from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_community.vectorstores import Chroma
+from langchain_community.llms import OpenAI
 from langchain.chains import RetrievalQA
 import logging
 
@@ -20,16 +20,16 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 
 # OpenAI API 키 검증
-if not os.getenv('OPENAI_API_KEY'):
-    raise ValueError(
-        "OpenAI API 키가 설정되지 않았습니다. "
-        ".env 파일에 OPENAI_API_KEY를 설정해주세요."
-    )
+# if not os.getenv('OPENAI_API_KEY'):
+#     raise ValueError(
+#         "OpenAI API 키가 설정되지 않았습니다. "
+#         ".env 파일에 OPENAI_API_KEY를 설정해주세요."
+#     )
 
 # 환경 설정
 FLASK_ENV = os.getenv('FLASK_ENV', 'development')
 PORT = int(os.getenv('PORT', 5001))
-HOST = os.getenv('HOST', '0.0.0.0')
+HOST = 'localhost'  # 호스트를 localhost로 변경
 DEBUG = FLASK_ENV == 'development'
 
 app = Flask(__name__)
@@ -51,50 +51,8 @@ qa_chain = None
 
 def initialize_qa_system():
     """QA 시스템을 초기화하고 PDF 문서를 처리합니다."""
-    global qa_chain
-    
-    try:
-        # PDF 파일들을 로드
-        documents = []
-        for filename in os.listdir(ADMIN_PDF_DIR):
-            if filename.endswith('.pdf'):
-                logger.info(f"Loading PDF: {filename}")
-                loader = PyPDFLoader(os.path.join(ADMIN_PDF_DIR, filename))
-                documents.extend(loader.load())
-        
-        if not documents:
-            logger.warning("No PDF documents found.")
-            return
-        
-        logger.info(f"Total documents loaded: {len(documents)}")
-        
-        # 문서 분할
-        text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=1000,
-            chunk_overlap=200
-        )
-        texts = text_splitter.split_documents(documents)
-        logger.info(f"Total chunks created: {len(texts)}")
-        
-        # 임베딩 및 벡터 저장소 생성
-        embeddings = OpenAIEmbeddings()
-        vectordb = Chroma.from_documents(
-            documents=texts,
-            embedding=embeddings,
-            persist_directory=DB_DIR
-        )
-        
-        # QA 체인 생성
-        qa_chain = RetrievalQA.from_chain_type(
-            llm=OpenAI(temperature=0),
-            chain_type="stuff",
-            retriever=vectordb.as_retriever()
-        )
-        
-        logger.info("QA system initialization completed!")
-    except Exception as e:
-        logger.error(f"Error initializing QA system: {str(e)}")
-        raise
+    logger.info("QA 시스템 초기화 건너뜀 (API 키 없음)")
+    return
 
 @app.route('/')
 def home():
@@ -106,23 +64,7 @@ def home():
 
 @app.route('/query', methods=['POST'])
 def query():
-    if not qa_chain:
-        logger.error("QA system not initialized")
-        return jsonify({'error': 'QA 시스템이 초기화되지 않았습니다.'}), 500
-    
-    data = request.get_json()
-    if not data or 'question' not in data:
-        logger.warning("Invalid request: missing question")
-        return jsonify({'error': '질문이 전송되지 않았습니다.'}), 400
-    
-    question = data['question']
-    try:
-        logger.info(f"Processing question: {question}")
-        answer = qa_chain.run(question)
-        return jsonify({'answer': answer}), 200
-    except Exception as e:
-        logger.error(f"Error processing question: {str(e)}")
-        return jsonify({'error': str(e)}), 500
+    return jsonify({'answer': "현재 OpenAI API 키가 설정되지 않아 응답할 수 없습니다."}), 200
 
 if __name__ == '__main__':
     logger.info(f"Starting server in {FLASK_ENV} mode...")
