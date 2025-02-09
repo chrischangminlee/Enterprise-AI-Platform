@@ -1,0 +1,222 @@
+/* 섹션 전체를 기본적으로 숨김 */
+section {
+  display: none;
+}
+
+/* active 클래스가 붙은 섹션만 보이게 함 */
+section.active {
+  display: block;
+}
+
+/* --- 기존 CSS 코드 --- */
+
+/* 기본 margin, padding 제거 및 박스 사이징 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body 기본 스타일 */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* 공통 container: 최대 넓이와 중앙 정렬 */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* 1. GNB 스타일 */
+#gnb {
+  background-color: #1E90FF; /* 파란색 배경 */
+}
+#gnb .menu {
+  list-style: none;
+  display: flex;
+}
+#gnb .menu li {
+  margin-left: 20px;
+}
+#gnb .menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+#gnb .logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* 2. 홈 페이지 구성요소 스타일 */
+.homepage .intro {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+.homepage .intro-text {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.homepage .intro-text h2 {
+  font-size: 1.5rem;
+}
+.homepage .intro-image {
+  flex: 1 1 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.homepage .intro-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 회색 Page Break */
+.page-break {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+/* About 영역 */
+.about {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+.about p {
+  margin-bottom: 10px;
+}
+.about .linkedin-link {
+  font-size: 0.9rem;
+}
+.about .linkedin-link a {
+  color: #1E90FF;
+  text-decoration: none;
+}
+
+/* 3. 보험기관 News 섹션 스타일 */
+.insurance-news {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+.insurance-news h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+/* 뉴스 카드 컨테이너: 플렉스, 자동 줄바꿈, 카드 간 간격 */
+.news-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+/* 뉴스 카드 스타일 */
+.news-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  display: flex;
+  width: calc(33.333% - 20px); /* 한 줄에 3개 */
+
+  /* 추가/변경 스타일 */
+  border: medium solid #1E90FF; /* medium 두께의 파란 테두리 */
+  background-color: #fff;       /* 흰색 배경 */
+}
+.news-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.news-card .news-title {
+  font-weight: bold; /* 글씨 굵게 */
+  padding: 10px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* 4. AI Tools and Data 섹션 스타일 */
+.ai-tools {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+.ai-tools h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+.tools-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.tool-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  width: calc(33.333% - 20px); /* 한 줄에 3개 */
+  display: flex;
+  flex-direction: column;
+
+  /* 추가/변경 스타일 */
+  border: medium solid #1E90FF;
+  background-color: #fff;
+}
+.tool-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.tool-card .tool-title {
+  font-weight: bold; /* 글씨 굵게 */
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* 반응형 디자인: 화면 크기에 따라 카드 배치 변경 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .homepage .intro {
+    flex-direction: column;
+  }
+  .news-card, .tool-card {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 480px) {
+  .news-card, .tool-card {
+    width: 100%;
+  }
+  #gnb .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  #gnb .menu li {
+    margin: 10px 0;
+  }
+}
