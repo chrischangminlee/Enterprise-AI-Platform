@@ -24,7 +24,7 @@ const tools: Tool[] = [
     title: "Coming Soon",
     description: "새로운 AI 도구가 준비중입니다",
     link: "#",
-    image: "/K_Actuary_AI_Agent/images/news4.png",
+    image: "/K_Actuary_AI_Agent/images/anya1.png",
     imageAlt: "Coming Soon Image",
     status: 'coming-soon'
   }
