@@ -9,12 +9,6 @@ interface Tool {
   status: 'active' | 'coming-soon';
 }
 
-const getImagePath = (imageName: string) => {
-  return process.env.NODE_ENV === 'production'
-    ? `${process.env.NEXT_PUBLIC_BASE_PATH}/images/${imageName}`
-    : `/images/${imageName}`;
-};
-
 const tools: Tool[] = [
   {
     title: "K-Actuarial AI Agent",
