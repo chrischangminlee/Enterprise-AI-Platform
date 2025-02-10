@@ -31,14 +31,14 @@ export default function RootLayout({
       >
         {/* GNB (Global Navigation Bar) */}
         <nav className="mb-12 bg-blue-600 shadow-md">
-          <div className="container mx-auto flex justify-between items-center py-4">
-            <Link href="/" className="flex items-center">
-              <span className="text-white font-bold whitespace-nowrap">
+          <div className="container mx-auto flex flex-col md:flex-row justify-between items-center py-4">
+            <Link href="/" className="flex items-center mb-4 md:mb-0">
+              <span className="text-white font-bold">
                 <span className="text-2xl">K 계리 AI Platform</span>
                 <span className="text-xl"> - Chris Chang Min Lee</span>
               </span>
             </Link>
-            <ul className="flex space-x-6">
+            <ul className="flex flex-wrap justify-center space-x-4">
               <li>
                 <Link
                   href="/"
