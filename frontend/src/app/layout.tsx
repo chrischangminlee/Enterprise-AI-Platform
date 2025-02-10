@@ -33,18 +33,15 @@ export default function RootLayout({
         {/* GNB (Global Navigation Bar) */}
         <nav className="mb-12 bg-blue-600 shadow-md">
           <div className="container mx-auto flex justify-between items-center py-4">
-            <Link href="/" className="flex items-center space-x-4">
-              <span className="text-white text-2xl font-bold">
-                K 계리 AI Platform
-              </span>
-              <Image
-                src="/K_Actuary_AI_Agent_Platform/images/logo.png"
-                alt="계리사 웹페이지 로고"
-                width={120}
-                height={120}
-                className="rounded-lg"
-                unoptimized
-              />
+            <Link href="/" className="flex items-center">
+              <div className="flex items-baseline space-x-2">
+                <span className="text-white text-2xl font-bold">
+                  K 계리 AI Platform
+                </span>
+                <span className="text-white text-xl font-bold">
+                  - Chris Chang Min Lee
+                </span>
+              </div>
             </Link>
             <ul className="flex space-x-6">
               <li>
