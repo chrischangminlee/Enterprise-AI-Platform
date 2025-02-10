@@ -34,6 +34,9 @@ export default function RootLayout({
         <nav className="mb-12 bg-blue-600 shadow-md">
           <div className="container mx-auto flex justify-between items-center py-4">
             <Link href="/" className="flex items-center space-x-4">
+              <span className="text-white text-2xl font-bold">
+                K 계리 AI Platform
+              </span>
               <Image
                 src="/K_Actuary_AI_Agent_Platform/images/logo.png"
                 alt="계리사 웹페이지 로고"
@@ -42,9 +45,6 @@ export default function RootLayout({
                 className="rounded-lg"
                 unoptimized
               />
-              <span className="text-white text-2xl font-bold">
-                K 계리 AI Platform
-              </span>
             </Link>
             <ul className="flex space-x-6">
               <li>
