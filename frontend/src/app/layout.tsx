@@ -43,7 +43,7 @@ export default function RootLayout({
                 unoptimized
               />
               <span className="text-white text-2xl font-bold">
-                K 계리 AI Platform -
+                K 계리 AI Platform
               </span>
             </Link>
             <ul className="flex space-x-6">
