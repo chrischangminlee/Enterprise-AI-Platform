@@ -15,7 +15,7 @@ const tools: Tool[] = [
   {
     title: "K-Actuarial AI Agent",
     description: "계리사 실무 관련 질의응답 AI 시스템",
-    link: "http://localhost:5001",
+    link: "https://chrischangminlee.github.io/K_Actuary_AI_Agent/",
     image: "/K_Actuary_AI_Agent_Platform/images/news4.png",
     imageAlt: "AI Agent Image",
     status: 'active'
