@@ -5,9 +5,9 @@ export default function Home() {
     <main className="min-h-screen p-8">
       {/* 소개 섹션 */}
       <section className="mb-12">
-        <div className="container mx-auto grid grid-cols-2 gap-8">
+        <div className="container mx-auto grid md:grid-cols-2 gap-8">
           <div className="flex flex-col justify-center">
-            <h1 className="text-4xl font-bold mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold mb-4">
               미래를 바라보는 계리사가 되기위해 필요한 한국 보험업계 정보 및 AI 관련 정보
             </h1>
           </div>

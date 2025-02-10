@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "계리사 웹페이지",
+  title: "K 계리 AI Platform",
   description: "계리사 실무 관련 정보 및 AI 도구",
 };
 
