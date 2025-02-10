@@ -34,11 +34,12 @@ export default function RootLayout({
           <div className="container mx-auto flex justify-between items-center py-4">
             <Link href="/" className="flex items-center">
               <Image
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/logo.png`}
+                src="/images/logo.png"
                 alt="계리사 웹페이지 로고"
                 width={120}
                 height={120}
                 className="rounded-lg"
+                unoptimized
               />
             </Link>
             <ul className="flex space-x-6">
