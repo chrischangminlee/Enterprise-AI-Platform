@@ -1,5 +1,11 @@
 import Image from "next/image";
 
+// --- basePath 분기 ---
+const basePath =
+  process.env.NODE_ENV === "production"
+    ? process.env.NEXT_PUBLIC_BASE_PATH
+    : "";
+
 export default function Home() {
   return (
     <main className="min-h-screen p-8">
@@ -12,8 +18,9 @@ export default function Home() {
             </h1>
           </div>
           <div>
+            {/* 홈 메인 이미지도 basePath 적용 */}
             <Image
-              src="/images/introimage.png"
+              src={`${basePath}/images/introimage.png`}
               alt="소개 이미지"
               width={375}
               height={225}
@@ -29,10 +36,10 @@ export default function Home() {
       <section className="container mx-auto">
         <div className="bg-gray-100 p-8 rounded-lg">
           <p className="mb-4">
-            안녕하세요, 저는 계리업계에 종사하고 있는 Chris 입니다. 
-            계리업무에 기술을 접목하는 여러가지 프로젝트를 시도해보고 있으며, 
-            이 웹페이지는 스터디하면서 접하게 되는 정보정리와 정보에 기반한 
-            AI 툴을 만들 수 있기 위한 준비 작업을 공유하기 위하여 만들어졌습니다. 
+            안녕하세요, 저는 계리업계에 종사하고 있는 Chris 입니다.
+            계리업무에 기술을 접목하는 여러가지 프로젝트를 시도해보고 있으며,
+            이 웹페이지는 스터디하면서 접하게 되는 정보정리와 정보에 기반한
+            AI 툴을 만들 수 있기 위한 준비 작업을 공유하기 위하여 만들어졌습니다.
             잘 부탁 드립니다.
           </p>
           <a

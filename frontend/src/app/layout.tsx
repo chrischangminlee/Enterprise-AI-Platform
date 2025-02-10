@@ -4,6 +4,7 @@ import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
 
+// 폰트 설정
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -19,11 +20,17 @@ export const metadata: Metadata = {
   description: "계리사 실무 관련 정보 및 AI 도구",
 };
 
+// --- 핵심: basePath 분기 (프로덕션 환경 vs 로컬 개발) ---
+const basePath =
+  process.env.NODE_ENV === "production"
+    ? process.env.NEXT_PUBLIC_BASE_PATH
+    : "";
+
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="ko">
       <body
@@ -33,8 +40,9 @@ export default function RootLayout({
         <nav className="mb-12 bg-blue-600 shadow-md">
           <div className="container mx-auto flex justify-between items-center py-4">
             <Link href="/" className="flex items-center">
+              {/* 로고 이미지 경로에 basePath 동적 적용 */}
               <Image
-                src="/images/logo.png"
+                src={`${basePath}/images/logo.png`}
                 alt="계리사 웹페이지 로고"
                 width={120}
                 height={120}
@@ -42,13 +50,34 @@ export default function RootLayout({
               />
             </Link>
             <ul className="flex space-x-6">
-              <li><Link href="/" className="text-white hover:text-gray-200 transition-colors duration-200">Home</Link></li>
-              <li><Link href="/ai-tools" className="text-white hover:text-gray-200 transition-colors duration-200">AI Tools and Data</Link></li>
-              <li><Link href="/insurance-news" className="text-white hover:text-gray-200 transition-colors duration-200">보험 기관 실무 News</Link></li>
               <li>
-                <a 
-                  href="https://www.linkedin.com/in/chrislee9407/" 
-                  target="_blank" 
+                <Link
+                  href="/"
+                  className="text-white hover:text-gray-200 transition-colors duration-200"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/ai-tools"
+                  className="text-white hover:text-gray-200 transition-colors duration-200"
+                >
+                  AI Tools and Data
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/insurance-news"
+                  className="text-white hover:text-gray-200 transition-colors duration-200"
+                >
+                  보험 기관 실무 News
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/chrislee9407/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-gray-200 transition-colors duration-200"
                 >

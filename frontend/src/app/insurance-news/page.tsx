@@ -1,12 +1,20 @@
-import Image from 'next/image'
+import Image from "next/image";
 
+// --- basePath 분기 ---
+const basePath =
+  process.env.NODE_ENV === "production"
+    ? process.env.NEXT_PUBLIC_BASE_PATH
+    : "";
+
+// 뉴스 아이템 인터페이스
 interface NewsItem {
   title: string;
   link: string;
-  image: string;
+  image: string;     // 예: "/images/news2.png"
   imageAlt: string;
 }
 
+// 뉴스 아이템 예시
 const newsItems: NewsItem[] = [
   {
     title: "[금융위원회 202501] ｢신뢰회복｣과 ｢혁신｣을 위한 6차 ｢보험개혁회의｣ 개최",
@@ -89,8 +97,9 @@ export default function InsuranceNews() {
             <div className="flex items-center h-full">
               <div className="relative w-24 h-auto">
                 <div className="aspect-square">
+                  {/* 여기서도 basePath + item.image */}
                   <Image
-                    src={item.image}
+                    src={`${basePath}${item.image}`}
                     alt={item.imageAlt}
                     fill
                     className="object-cover rounded-l-lg"
@@ -98,12 +107,14 @@ export default function InsuranceNews() {
                 </div>
               </div>
               <div className="flex-1 p-4">
-                <h2 className="text-sm font-semibold line-clamp-3">{item.title}</h2>
+                <h2 className="text-sm font-semibold line-clamp-3">
+                  {item.title}
+                </h2>
               </div>
             </div>
           </a>
         ))}
       </div>
     </main>
-  )
-} 
+  );
+}

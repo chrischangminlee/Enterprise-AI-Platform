@@ -1,14 +1,22 @@
-import Image from 'next/image'
+import Image from "next/image";
 
+// --- basePath 분기 ---
+const basePath =
+  process.env.NODE_ENV === "production"
+    ? process.env.NEXT_PUBLIC_BASE_PATH
+    : "";
+
+// Tool 인터페이스
 interface Tool {
   title: string;
   description: string;
   link: string;
-  image: string;
+  image: string;        // 예: "/images/news4.png"
   imageAlt: string;
   status: 'active' | 'coming-soon';
 }
 
+// 샘플 Tools 데이터
 const tools: Tool[] = [
   {
     title: "K-Actuarial AI Agent",
@@ -42,12 +50,13 @@ export default function AITools() {
             href={tool.status === 'active' ? tool.link : '#'}
             target={tool.status === 'active' ? "_blank" : "_self"}
             rel="noopener noreferrer"
-            className={`block bg-white rounded-lg shadow-lg transition-shadow duration-300 
+            className={`block bg-white rounded-lg shadow-lg transition-shadow duration-300
               ${tool.status === 'active' ? 'hover:shadow-xl' : 'cursor-not-allowed opacity-60'}`}
           >
             <div className="relative h-48">
               <Image
-                src={tool.image}
+                // basePath + tool.image
+                src={`${basePath}${tool.image}`}
                 alt={tool.imageAlt}
                 fill
                 className="object-cover rounded-t-lg"
@@ -66,5 +75,5 @@ export default function AITools() {
         ))}
       </div>
     </main>
-  )
-} 
+  );
+}
