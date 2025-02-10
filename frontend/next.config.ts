@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   output: 'export',
 
   // GitHub Pages 배포를 위한 basePath 설정
-  basePath: '/K_Actuary_AI_Agent',
+  basePath: '/K_Actuary_AI_Agent_Platform',
 
   images: {
     // GitHub Pages 호스팅에서는 Next 이미지 최적화 기능 사용 불가

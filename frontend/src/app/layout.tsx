@@ -36,7 +36,7 @@ export default function RootLayout({
             <Link href="/" className="flex items-center">
               {/* 로고 이미지 경로에 basePath 동적 적용 */}
               <Image
-                src="/K_Actuary_AI_Agent/images/logo.png"
+                src="/K_Actuary_AI_Agent_Platform/images/logo.png"
                 alt="계리사 웹페이지 로고"
                 width={120}
                 height={120}

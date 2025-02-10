@@ -13,7 +13,7 @@ export default function Home() {
           </div>
           <div>
             <Image
-              src="/K_Actuary_AI_Agent/images/introimage.png"
+              src="/K_Actuary_AI_Agent_Platform/images/introimage.png"
               alt="소개 이미지"
               width={375}
               height={225}

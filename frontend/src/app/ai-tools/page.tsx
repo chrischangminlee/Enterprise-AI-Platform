@@ -5,7 +5,7 @@ interface Tool {
   title: string;
   description: string;
   link: string;
-  image: string;        // 예: "/K_Actuary_AI_Agent/images/news4.png"
+  image: string;        // 예: "/K_Actuary_AI_Agent_Platform/images/news4.png"
   imageAlt: string;
   status: 'active' | 'coming-soon';
 }
@@ -16,7 +16,7 @@ const tools: Tool[] = [
     title: "K-Actuarial AI Agent",
     description: "계리사 실무 관련 질의응답 AI 시스템",
     link: "http://localhost:5001",
-    image: "/K_Actuary_AI_Agent/images/news4.png",
+    image: "/K_Actuary_AI_Agent_Platform/images/news4.png",
     imageAlt: "AI Agent Image",
     status: 'active'
   },
@@ -24,7 +24,7 @@ const tools: Tool[] = [
     title: "Coming Soon",
     description: "새로운 AI 도구가 준비중입니다",
     link: "#",
-    image: "/K_Actuary_AI_Agent/images/anya1.png",
+    image: "/K_Actuary_AI_Agent_Platform/images/anya1.png",
     imageAlt: "Coming Soon Image",
     status: 'coming-soon'
   }
