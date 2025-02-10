@@ -9,12 +9,18 @@ interface Tool {
   status: 'active' | 'coming-soon';
 }
 
+const getImagePath = (imageName: string) => {
+  return process.env.NODE_ENV === 'production'
+    ? `${process.env.NEXT_PUBLIC_BASE_PATH}/images/${imageName}`
+    : `/images/${imageName}`;
+};
+
 const tools: Tool[] = [
   {
     title: "K-Actuarial AI Agent",
     description: "계리사 실무 관련 질의응답 AI 시스템",
     link: "http://localhost:5001",
-    image: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/news4.png`,
+    image: getImagePath('news4.png'),
     imageAlt: "AI Agent Image",
     status: 'active'
   },
@@ -22,7 +28,7 @@ const tools: Tool[] = [
     title: "Coming Soon",
     description: "새로운 AI 도구가 준비중입니다",
     link: "#",
-    image: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/news4.png`,
+    image: getImagePath('news4.png'),
     imageAlt: "Coming Soon Image",
     status: 'coming-soon'
   }
