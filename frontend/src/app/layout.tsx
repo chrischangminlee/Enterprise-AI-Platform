@@ -33,14 +33,10 @@ export default function RootLayout({
         <nav className="mb-12 bg-blue-600 shadow-md">
           <div className="container mx-auto flex justify-between items-center py-4">
             <Link href="/" className="flex items-center">
-              <div className="flex items-baseline space-x-2">
-                <span className="text-white text-2xl font-bold">
-                  K 계리 AI Platform
-                </span>
-                <span className="text-white text-xl font-bold">
-                  - Chris Chang Min Lee
-                </span>
-              </div>
+              <span className="text-white font-bold whitespace-nowrap">
+                <span className="text-2xl">K 계리 AI Platform</span>
+                <span className="text-xl"> - Chris Chang Min Lee</span>
+              </span>
             </Link>
             <ul className="flex space-x-6">
               <li>
