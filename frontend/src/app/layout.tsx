@@ -20,12 +20,6 @@ export const metadata: Metadata = {
   description: "계리사 실무 관련 정보 및 AI 도구",
 };
 
-// --- 핵심: basePath 분기 (프로덕션 환경 vs 로컬 개발) ---
-const basePath =
-  process.env.NODE_ENV === "production"
-    ? process.env.NEXT_PUBLIC_BASE_PATH
-    : "";
-
 export default function RootLayout({
   children,
 }: {

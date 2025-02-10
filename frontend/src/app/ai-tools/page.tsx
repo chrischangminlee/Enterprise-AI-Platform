@@ -1,17 +1,11 @@
 import Image from "next/image";
 
-// --- basePath 분기 ---
-const basePath =
-  process.env.NODE_ENV === "production"
-    ? process.env.NEXT_PUBLIC_BASE_PATH
-    : "";
-
 // Tool 인터페이스
 interface Tool {
   title: string;
   description: string;
   link: string;
-  image: string;        // 예: "/images/news4.png"
+  image: string;        // 예: "/K_Actuary_AI_Agent/images/news4.png"
   imageAlt: string;
   status: 'active' | 'coming-soon';
 }
@@ -22,7 +16,7 @@ const tools: Tool[] = [
     title: "K-Actuarial AI Agent",
     description: "계리사 실무 관련 질의응답 AI 시스템",
     link: "http://localhost:5001",
-    image: "/images/news4.png",
+    image: "/K_Actuary_AI_Agent/images/news4.png",
     imageAlt: "AI Agent Image",
     status: 'active'
   },
@@ -30,7 +24,7 @@ const tools: Tool[] = [
     title: "Coming Soon",
     description: "새로운 AI 도구가 준비중입니다",
     link: "#",
-    image: "/images/news4.png",
+    image: "/K_Actuary_AI_Agent/images/news4.png",
     imageAlt: "Coming Soon Image",
     status: 'coming-soon'
   }
@@ -55,8 +49,7 @@ export default function AITools() {
           >
             <div className="relative h-48">
               <Image
-                // basePath + tool.image
-                src={`${basePath}${tool.image}`}
+                src={tool.image}
                 alt={tool.imageAlt}
                 fill
                 className="object-cover rounded-t-lg"

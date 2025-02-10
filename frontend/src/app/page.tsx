@@ -1,11 +1,5 @@
 import Image from "next/image";
 
-// --- basePath 분기 ---
-const basePath =
-  process.env.NODE_ENV === "production"
-    ? process.env.NEXT_PUBLIC_BASE_PATH
-    : "";
-
 export default function Home() {
   return (
     <main className="min-h-screen p-8">
@@ -18,9 +12,8 @@ export default function Home() {
             </h1>
           </div>
           <div>
-            {/* 홈 메인 이미지도 basePath 적용 */}
             <Image
-              src={`${basePath}/images/introimage.png`}
+              src="/K_Actuary_AI_Agent/images/introimage.png"
               alt="소개 이미지"
               width={375}
               height={225}
