@@ -13,9 +13,7 @@ export default function Home() {
           </div>
           <div>
             <Image
-              src={process.env.NODE_ENV === 'production' 
-                ? `${process.env.NEXT_PUBLIC_BASE_PATH}/images/introimage.png`
-                : '/images/introimage.png'}
+              src="/images/introimage.png"
               alt="소개 이미지"
               width={375}
               height={225}

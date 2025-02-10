@@ -17,13 +17,13 @@ const newsItems: NewsItem[] = [
   {
     title: "[금융위원회 202501] ｢신뢰회복｣과 ｢혁신｣을 위한 6차 ｢보험개혁회의｣ 개최",
     link: "https://www.fsc.go.kr/no010101/83897",
-    image: getImagePath('news2.png'),
+    image: "/images/news2.png",
     imageAlt: "금융위원회 뉴스"
   },
   {
     title: "[금융위원회 202412] ｢신뢰회복｣과 ｢혁신｣을 위한 5차 ｢보험개혁회의｣ 개최",
     link: "https://www.fsc.go.kr/no010101/83625",
-    image: getImagePath('news2.png'),
+    image: "/images/news2.png",
     imageAlt: "금융위원회 뉴스"
   },
   {

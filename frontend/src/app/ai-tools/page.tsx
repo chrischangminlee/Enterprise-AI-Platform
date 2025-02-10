@@ -20,7 +20,7 @@ const tools: Tool[] = [
     title: "K-Actuarial AI Agent",
     description: "계리사 실무 관련 질의응답 AI 시스템",
     link: "http://localhost:5001",
-    image: getImagePath('news4.png'),
+    image: "/images/news4.png",
     imageAlt: "AI Agent Image",
     status: 'active'
   },
@@ -28,7 +28,7 @@ const tools: Tool[] = [
     title: "Coming Soon",
     description: "새로운 AI 도구가 준비중입니다",
     link: "#",
-    image: getImagePath('news4.png'),
+    image: "/images/news4.png",
     imageAlt: "Coming Soon Image",
     status: 'coming-soon'
   }
