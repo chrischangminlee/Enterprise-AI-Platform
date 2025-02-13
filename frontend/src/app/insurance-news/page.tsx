@@ -65,6 +65,11 @@ const newsItems: NewsItem[] = [
     imageAlt: "금융감독원 뉴스"
   },
   {
+    title: "[금융감독원 202212] 보험회사 新지급여력제도 (K-ICS) 해설서",
+    link: "https://i-kiin.net/wp-content/uploads/2023/01/%E6%96%B0%EC%A7%80%EA%B8%89%EC%97%AC%EB%A0%A5%EC%A0%9C%EB%8F%84K-ICS-%ED%95%B4%EC%84%A4%EC%84%9C_%EA%B2%8C%EC%8B%9C.pdf",
+    image: "/K_Actuary_AI_Agent_Platform/images/news3.png",
+    imageAlt: "금융감독원 뉴스"
+  },  {
     title: "[기타] IFRS17 Whitepaper",
     link: "https://ifrsdoc.gofsolution.com/",
     image: "/K_Actuary_AI_Agent_Platform/images/news4.png",
