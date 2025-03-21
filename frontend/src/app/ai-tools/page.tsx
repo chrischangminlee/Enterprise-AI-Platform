@@ -21,6 +21,14 @@ const tools: Tool[] = [
     status: 'active'
   },
   {
+    title: "K-Actuary 약관 정보 추출 AI Agent",
+    description: "보험 약관 계리 모델링 정보 추출 AI",
+    link: "https://kactuarypdf.streamlit.app/",
+    image: "/K_Actuary_AI_Agent_Platform/images/news4.png",
+    imageAlt: "AI Agent Image",
+    status: 'active'
+  },
+  {
     title: "Coming Soon",
     description: "새로운 AI 도구가 준비중입니다",
     link: "#",
