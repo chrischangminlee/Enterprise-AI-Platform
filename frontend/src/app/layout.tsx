@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "K 계리 AI Platform",
-  description: "계리사 실무 관련 정보 및 AI 도구",
+  title: "Chris Chang Min Lee's AI Insights",
+  description: "AI와 함께하는 일상을 준비하는 AI 정보 Insights Platform",
 };
 
 export default function RootLayout({
@@ -34,8 +34,7 @@ export default function RootLayout({
           <div className="container mx-auto flex flex-col md:flex-row justify-between items-center py-4">
             <Link href="/" className="flex items-center mb-4 md:mb-0">
               <span className="text-white font-bold whitespace-nowrap">
-                <span className="text-lg sm:text-xl md:text-2xl">K 계리 AI Platform</span>
-                <span className="text-base sm:text-lg md:text-xl"> - Chris Chang Min Lee</span>
+                <span className="text-lg sm:text-xl md:text-2xl">Chris Chang Min Lee's AI Insights</span>
               </span>
             </Link>
             <ul className="flex flex-wrap justify-center space-x-4">
@@ -52,15 +51,15 @@ export default function RootLayout({
                   href="/ai-tools"
                   className="text-white hover:text-gray-200 transition-colors duration-200"
                 >
-                  AI Tools and Data
+                  AI Tools
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/insurance-news"
+                  href="/blog-posts"
                   className="text-white hover:text-gray-200 transition-colors duration-200"
                 >
-                  보험 기관 실무 News
+                  Blog Posts
                 </Link>
               </li>
               <li>

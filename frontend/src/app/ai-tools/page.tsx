@@ -42,20 +42,20 @@ export default function AITools() {
   return (
     <main className="min-h-screen p-8">
       <h1 className="text-3xl font-bold mb-8">
-        계리 관련 AI 툴 및 데이터 정제 작업물을 업로드합니다.
+        AI Tools
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {tools.map((tool, index) => (
           <a
             key={index}
             href={tool.status === 'active' ? tool.link : '#'}
             target={tool.status === 'active' ? "_blank" : "_self"}
             rel="noopener noreferrer"
-            className={`block bg-white rounded-lg shadow-lg transition-shadow duration-300
-              ${tool.status === 'active' ? 'hover:shadow-xl' : 'cursor-not-allowed opacity-60'}`}
+            className={`block bg-white rounded-lg shadow-md transition-shadow duration-300 max-w-sm mx-auto
+              ${tool.status === 'active' ? 'hover:shadow-lg' : 'cursor-not-allowed opacity-60'}`}
           >
-            <div className="relative h-48">
+            <div className="relative h-32">
               <Image
                 src={tool.image}
                 alt={tool.imageAlt}
@@ -63,9 +63,9 @@ export default function AITools() {
                 className="object-cover rounded-t-lg"
               />
             </div>
-            <div className="p-4">
-              <h2 className="text-xl font-semibold mb-2">{tool.title}</h2>
-              <p className="text-gray-600">{tool.description}</p>
+            <div className="p-3">
+              <h2 className="text-lg font-semibold mb-1">{tool.title}</h2>
+              <p className="text-sm text-gray-600">{tool.description}</p>
               {tool.status === 'coming-soon' && (
                 <span className="inline-block mt-2 px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">
                   Coming Soon
