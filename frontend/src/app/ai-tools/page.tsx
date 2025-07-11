@@ -40,40 +40,47 @@ const tools: Tool[] = [
 
 export default function AITools() {
   return (
-    <main className="min-h-screen p-8">
-      <h1 className="text-3xl font-bold mb-8">
-        AI Tools
-      </h1>
+    <main className="min-h-screen p-4 sm:p-6 lg:p-8">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
+          AI Tools
+        </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {tools.map((tool, index) => (
-          <a
-            key={index}
-            href={tool.status === 'active' ? tool.link : '#'}
-            target={tool.status === 'active' ? "_blank" : "_self"}
-            rel="noopener noreferrer"
-            className={`block bg-white rounded-lg shadow-md transition-shadow duration-300 max-w-sm mx-auto
-              ${tool.status === 'active' ? 'hover:shadow-lg' : 'cursor-not-allowed opacity-60'}`}
-          >
-            <div className="relative h-32">
-              <Image
-                src={tool.image}
-                alt={tool.imageAlt}
-                fill
-                className="object-cover rounded-t-lg"
-              />
-            </div>
-            <div className="p-3">
-              <h2 className="text-lg font-semibold mb-1">{tool.title}</h2>
-              <p className="text-sm text-gray-600">{tool.description}</p>
-              {tool.status === 'coming-soon' && (
-                <span className="inline-block mt-2 px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">
-                  Coming Soon
-                </span>
-              )}
-            </div>
-          </a>
-        ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
+          {tools.map((tool, index) => (
+            <a
+              key={index}
+              href={tool.status === 'active' ? tool.link : '#'}
+              target={tool.status === 'active' ? "_blank" : "_self"}
+              rel="noopener noreferrer"
+              className={`group block bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden
+                ${tool.status === 'active' ? 'cursor-pointer' : 'cursor-not-allowed opacity-60'}`}
+            >
+              <div className="relative h-24 sm:h-28 bg-gradient-to-br from-blue-50 to-blue-100">
+                <Image
+                  src={tool.image}
+                  alt={tool.imageAlt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-3 sm:p-4">
+                <h2 className="text-base sm:text-lg font-semibold mb-1 line-clamp-1">{tool.title}</h2>
+                <p className="text-xs sm:text-sm text-gray-600 line-clamp-2">{tool.description}</p>
+                {tool.status === 'coming-soon' && (
+                  <span className="inline-block mt-2 px-2 py-0.5 bg-yellow-100 text-yellow-800 rounded-full text-xs">
+                    Coming Soon
+                  </span>
+                )}
+                {tool.status === 'active' && (
+                  <span className="inline-block mt-2 text-blue-600 text-xs sm:text-sm font-medium group-hover:text-blue-700">
+                    Visit Tool →
+                  </span>
+                )}
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     </main>
   );
