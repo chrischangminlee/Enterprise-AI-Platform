@@ -26,7 +26,7 @@ uvicorn src.main:app --reload --port 5001    # Start FastAPI server
 
 ### GitHub Pages Deployment
 The frontend is configured for static export to GitHub Pages:
-- Base path: `/K_Actuary_AI_Agent_Platform`
+- Base path: `/Enterprise-AI-Platform`
 - Build output: `frontend/out/`
 - Run `npm run build` in frontend directory to generate static files
 

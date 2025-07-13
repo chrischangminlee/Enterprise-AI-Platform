@@ -18,7 +18,7 @@ const blogPosts: BlogPost[] = [
     link: "https://changminiai.tistory.com/entry/%EC%A0%A0%EC%8A%A4%ED%8C%8C%ED%81%AC-Genspark-AI-Slides-PPT-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-%EB%AC%B8%EC%84%9C-%EC%9E%A5%ED%91%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0-AI-Super-Agent-%EC%8A%88%ED%8D%BC-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EB%A1%9C-%EC%86%90%EC%89%BD%EA%B2%8C-AI-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-%EB%AC%B8%EC%84%9C-%EC%9E%91%EC%97%85", // 실제 Tistory 링크로 교체 필요
     date: "2025-07-05",
     category: "AI 실무",
-    image: "/K_Actuary_AI_Agent_Platform/images/anya1.png"
+    image: "/Enterprise-AI-Platform/images/anya1.png"
   },
   {
     title: "ChatGPT 활용 가이드",
@@ -26,7 +26,7 @@ const blogPosts: BlogPost[] = [
     link: "https://tistory.com", // 실제 Tistory 링크로 교체 필요
     date: "2024-01-10",
     category: "AI 도구",
-    image: "/K_Actuary_AI_Agent_Platform/images/anya1.png"
+    image: "/Enterprise-AI-Platform/images/anya1.png"
   },
   {
     title: "머신러닝 기초 개념",
@@ -34,7 +34,7 @@ const blogPosts: BlogPost[] = [
     link: "https://tistory.com", // 실제 Tistory 링크로 교체 필요
     date: "2024-01-05",
     category: "기술 이해",
-    image: "/K_Actuary_AI_Agent_Platform/images/anya1.png"
+    image: "/Enterprise-AI-Platform/images/anya1.png"
   },
   {
     title: "AI 윤리와 책임있는 AI 사용",
@@ -42,7 +42,7 @@ const blogPosts: BlogPost[] = [
     link: "https://tistory.com", // 실제 Tistory 링크로 교체 필요
     date: "2024-01-01",
     category: "AI 윤리",
-    image: "/K_Actuary_AI_Agent_Platform/images/anya1.png"
+    image: "/Enterprise-AI-Platform/images/anya1.png"
   }
 ];
 
