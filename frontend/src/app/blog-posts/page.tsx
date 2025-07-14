@@ -13,37 +13,38 @@ interface BlogPost {
 // 샘플 블로그 포스트 데이터
 const blogPosts: BlogPost[] = [
   {
+    title: "기업 활용 특성화 환각 최소화 AI PDF 분석 툴",
+    description: "직접만든 환각 최소화 AI PDF 분석 툴",
+    link: "https://changminiai.tistory.com/entry/%EA%B8%B0%EC%97%85-%ED%99%9C%EC%9A%A9%EC%97%90-%EC%B5%9C%EC%A0%81%ED%99%94%EB%90%9C-%EA%B3%B5%EC%A7%9C-AI-PDF-%EB%B6%84%EC%84%9D%EA%B8%B0-%EC%A7%81%EC%A0%91%EB%A7%8C%EB%93%A0-PDF-%ED%99%98%EA%B0%81-%EC%B5%9C%EC%86%8C%ED%99%94%EB%90%9C-%EC%82%AC%EC%9A%A9-%ED%95%84%EC%88%98-%EB%B6%84%EC%84%9D-%ED%88%B4-%EA%B3%B5%EC%9C%A0", 
+    date: "2025-07-14",
+    category: "AI 문서",
+    image: "/Enterprise-AI-Platform/images/PDF-AI-Tool-Image.png"
+  },
+  {
     title: "젠스파크 Genspark AI Slides PPT 슬라이드 문서 장표 만들기",
     description: "슈퍼 에이전트로 손쉽게 AI 슬라이드 문서 작업",
     link: "https://changminiai.tistory.com/entry/%EC%A0%A0%EC%8A%A4%ED%8C%8C%ED%81%AC-Genspark-AI-Slides-PPT-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-%EB%AC%B8%EC%84%9C-%EC%9E%A5%ED%91%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0-AI-Super-Agent-%EC%8A%88%ED%8D%BC-%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%EB%A1%9C-%EC%86%90%EC%89%BD%EA%B2%8C-AI-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-%EB%AC%B8%EC%84%9C-%EC%9E%91%EC%97%85", // 실제 Tistory 링크로 교체 필요
     date: "2025-07-05",
     category: "AI 실무",
-    image: "/Enterprise-AI-Platform/images/anya1.png"
+    image: "/Enterprise-AI-Platform/images/Genspark-Image.png"
   },
   {
     title: "노트북LM NotebookLM 사용법 – 구글 AI 노트 정리 비서",
     description: "복잡한 자료도 똑똑하게 요약하고 정리해주는 AI 리서치 도우미",
     link: "https://changminiai.tistory.com/entry/%EA%B5%AC%EA%B8%80-%EB%85%B8%ED%8A%B8%EB%B6%81LM-%EC%82%AC%EC%9A%A9%EB%B2%95-%EC%9D%BC%EC%9E%98%EB%9F%AC%EC%99%80-%ED%8C%8C%EC%9B%8CJ%EB%A5%BC-%EC%9C%84%ED%95%9C-%ED%95%84%EC%88%98-AI-%EB%8F%84%EA%B5%AC", 
-    date: "2024-02-22",
+    date: "2025-02-22",
     category: "AI 실무",
-    image: "/Enterprise-AI-Platform/images/anya1.png"
+    image: "/Enterprise-AI-Platform/images/NotebookLM-Image.png"
   },
   {
     title: "힉스필드 Higgsfield AI – 누구나 쉽게 만드는 AI 영상 생성기",
     description: "셀카 한 장이면 끝, 나만의 짧은 영상 콘텐츠를 만들어주는 AI 영상 비서",
     link: "https://changminiai.tistory.com/entry/Higgsfield-%ED%9E%89%EC%8A%A4%ED%95%84%EB%93%9C-AI-%EC%82%AC%EC%9A%A9%EB%B2%95-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95-%EC%89%AC%EC%9A%B4-%EC%98%81%EC%83%81-%EC%83%9D%EC%84%B1-AI", 
-    date: "2024-04-10",
+    date: "2025-04-10",
     category: "AI 영상",
-    image: "/Enterprise-AI-Platform/images/anya1.png"
-  },
-  {
-    title: "AI 윤리와 책임있는 AI 사용",
-    description: "AI 기술을 윤리적이고 책임감 있게 사용하는 방법에 대해 논의합니다.",
-    link: "https://tistory.com", // 실제 Tistory 링크로 교체 필요
-    date: "2024-01-01",
-    category: "AI 윤리",
-    image: "/Enterprise-AI-Platform/images/anya1.png"
+    image: "/Enterprise-AI-Platform/images/Higgsfield-image.png"
   }
+  
 ];
 
 export default function BlogPosts() {
