@@ -72,6 +72,26 @@ export default function RootLayout({
                   관리자 Linkedin
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/@EnterpriseAILab"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-gray-200 transition-colors duration-200"
+                >
+                  Youtube
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://open.kakao.com/o/gbr6iuGh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-gray-200 transition-colors duration-200"
+                >
+                  오픈카톡
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
