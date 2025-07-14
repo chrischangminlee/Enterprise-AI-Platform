@@ -100,7 +100,7 @@ export default function BlogPosts() {
           <p className="text-sm sm:text-base text-gray-600">
             더 많은 글은{" "}
             <a
-              href="https://tistory.com"
+              href="https://changminiai.tistory.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-700 font-medium hover:underline"
