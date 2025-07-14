@@ -4,7 +4,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Chris Chang Min Lee's AI Insights - A platform providing AI information and tools to help prepare for daily life with AI (AI와 함께하는 일상을 준비하는 AI 정보 Insights Platform).
+**Enterprise AI Insights Platform** - A comprehensive platform providing AI information and tools to help prepare for daily life with AI (AI와 함께하는 일상을 준비하는 AI 정보 Insights Platform).
+
+### Key Features
+- **AI Tools Showcase**: Interactive tools for actuarial and insurance professionals
+- **Educational Content**: Blog posts and articles about AI implementation
+- **Professional Resources**: Specialized AI agents for K-Actuarial tasks
+
+### Repository Information
+- **Repository Name**: Enterprise-AI-Platform
+- **GitHub Pages URL**: https://chrischangminlee.github.io/Enterprise-AI-Platform/
+- **Previous Name**: K_Actuary_AI_Agent_Platform (renamed)
 
 ## Key Commands
 
@@ -26,84 +36,174 @@ uvicorn src.main:app --reload --port 5001    # Start FastAPI server
 
 ### GitHub Pages Deployment
 The frontend is configured for static export to GitHub Pages:
-- Base path: `/Enterprise-AI-Platform`
-- Build output: `frontend/out/`
-- Run `npm run build` in frontend directory to generate static files
+- **Base path**: `/Enterprise-AI-Platform`
+- **Build output**: `frontend/out/`
+- **Deployment steps**:
+  1. Run `npm run build` in frontend directory
+  2. Commit all changes including the `out/` directory
+  3. Push to main branch
+  4. GitHub Pages automatically serves from the configured source
+
+### Git Workflow
+```bash
+# After making changes
+git add -A
+git commit -m "Your commit message"
+git push origin main
+
+# If repository was renamed, update remote URL
+git remote set-url origin https://github.com/chrischangminlee/Enterprise-AI-Platform.git
+```
 
 ## Architecture Overview
 
 ### Frontend (Next.js 15.2.4)
-- **App Router Structure**: Uses Next.js 13+ App Router in `frontend/src/app/`
-- **Static Export**: Configured for GitHub Pages deployment with `output: 'export'`
-- **Styling**: Tailwind CSS with global styles in `app/globals.css`
-- **Key Pages**:
-  - `/` - Main landing page with platform introduction
-  - `/ai-tools/` - AI tools showcase
-  - `/blog-posts/` - Blog posts and articles from Tistory
+- **Framework**: Next.js with App Router (v13+)
+- **Deployment**: Static export for GitHub Pages
+- **Styling**: Tailwind CSS with responsive design
+- **TypeScript**: Strict mode enabled
+- **Key Features**:
+  - Static site generation with `output: 'export'`
+  - Responsive navigation with mobile support
+  - Image optimization disabled for static hosting
+  - Trailing slashes enabled for proper GitHub Pages routing
+
+#### Page Structure
+- `/` - Main landing page with platform introduction and featured content
+- `/ai-tools/` - Showcase of AI tools including:
+  - K-Actuarial AI Agent (https://kactuaryagent.streamlit.app/)
+  - K-Actuary 약관 정보 추출 AI Agent (https://kactuarypdf.streamlit.app/)
+- `/blog-posts/` - Educational articles and Tistory blog integration
 
 ### Backend (FastAPI)
-- **Entry Point**: `backend/src/main.py` - FastAPI application with CORS middleware
-- **API Structure**: Routers in `backend/src/routers/` (actuarial.py)
-- **Services**: Business logic in `backend/src/services/` (qa_service.py)
-- **Data Storage**:
-  - PDFs: `backend/data/pdfs/`
-  - Vector DB: `backend/data/vector_db/` (ChromaDB for document embeddings)
-- **Port**: Runs on port 5001 by default
+- **Framework**: FastAPI with async support
+- **Port**: 5001 (configurable)
+- **Architecture**:
+  - Entry Point: `backend/src/main.py`
+  - Routers: `backend/src/routers/` (actuarial.py)
+  - Services: `backend/src/services/` (qa_service.py)
+  - CORS enabled for frontend integration
 
 ### AI/ML Components
-- Vector database using ChromaDB for document search
-- Q&A service in `backend/src/services/qa_service.py`
-- Integration with LangChain and OpenAI (per README)
+- **Vector Database**: ChromaDB for document embeddings
+- **Document Processing**: PDF analysis and Q&A capabilities
+- **AI Integration**: LangChain and OpenAI APIs
+- **Data Storage**:
+  - PDFs: `backend/data/pdfs/`
+  - Vector DB: `backend/data/vector_db/`
 
 ## Important Configuration Files
 
-### Frontend
-- `frontend/next.config.ts` - Static export and GitHub Pages configuration
-- `frontend/tsconfig.json` - TypeScript with strict mode enabled
-- `frontend/tailwind.config.ts` - Tailwind CSS configuration
-- `frontend/.env.local` - Frontend environment variables (create from .env.local.example)
+### Frontend Configuration
+- `frontend/next.config.ts` - Next.js configuration with GitHub Pages settings
+- `frontend/tsconfig.json` - TypeScript configuration (strict mode)
+- `frontend/tailwind.config.ts` - Tailwind CSS customization
+- `frontend/.env.local` - Environment variables (create from .env.local.example)
+- `frontend/package.json` - Dependencies and scripts
 
-### Backend
-- `backend/.env` - Backend environment variables (create from .env.example)
-- **Missing**: `backend/requirements.txt` - Must be created with Python dependencies
+### Backend Configuration
+- `backend/.env` - Environment variables (create from .env.example)
+- `backend/requirements.txt` - **Missing**: Must be created with:
+  ```
+  fastapi
+  uvicorn[standard]
+  python-dotenv
+  langchain
+  langchain-community
+  chromadb
+  openai
+  pypdf
+  pydantic
+  ```
 
 ## Development Considerations
 
-1. **Static Site Limitations**: The frontend is configured for static export, so dynamic Next.js features (SSR, API routes) are not available.
+### Frontend Guidelines
+1. **Static Export Limitations**: 
+   - No server-side rendering (SSR)
+   - No API routes (use external backend)
+   - Images must be unoptimized
+   - All routes must have trailing slashes
 
-2. **Missing Python Dependencies**: No `requirements.txt` file exists. When creating one, include:
-   - fastapi
-   - uvicorn
-   - python-dotenv
-   - langchain
-   - chromadb
-   - Any OpenAI/AI libraries used
+2. **Image Handling**:
+   - Store images in `frontend/public/images/`
+   - Reference with full base path: `/Enterprise-AI-Platform/images/[filename]`
+   - Use Next.js Image component with `unoptimized` prop
 
-3. **Environment Variables**: Both frontend and backend require environment configuration files that need to be created from example files.
+3. **TypeScript Best Practices**:
+   - Define interfaces for all data structures
+   - Use strict typing for props and state
+   - Avoid `any` type usage
 
-4. **CORS Configuration**: Backend is configured to accept requests from the frontend URL specified in environment variables.
+4. **Responsive Design**:
+   - Mobile-first approach with Tailwind breakpoints
+   - Test on various screen sizes
+   - Ensure navigation works on mobile devices
 
-5. **TypeScript**: Frontend uses TypeScript with strict mode - ensure all new code is properly typed.
+### Backend Guidelines
+1. **API Design**:
+   - RESTful endpoints with clear naming
+   - Async functions for I/O operations
+   - Proper error handling and status codes
 
-6. **URL Structure**: All frontend routes use trailing slashes due to `trailingSlash: true` configuration.
+2. **Security**:
+   - Environment variables for sensitive data
+   - CORS configuration for production
+   - Input validation with Pydantic models
 
 ## Common Tasks
 
 ### Adding a New Frontend Page
-1. Create a new directory under `frontend/src/app/[page-name]/`
-2. Add `page.tsx` file in the directory
-3. Follow existing page patterns for layout and styling
+1. Create directory: `frontend/src/app/[page-name]/`
+2. Add `page.tsx` with proper TypeScript types
+3. Update navigation in `layout.tsx` if needed
+4. Test with `npm run dev` before building
 
 ### Adding a New API Endpoint
-1. Create or update router file in `backend/src/routers/`
+1. Create/update router in `backend/src/routers/`
 2. Implement service logic in `backend/src/services/`
-3. Update `backend/src/main.py` to include new router if needed
+3. Register router in `backend/src/main.py`
+4. Update CORS settings if needed
 
 ### Updating Static Content
-1. Images go in `frontend/public/images/`
-2. Remember images are unoptimized due to static export configuration
+1. Add images to `frontend/public/images/`
+2. Reference with full base path in components
+3. Build and test locally before deploying
 
-### Deploying to GitHub Pages
-1. Run `npm run build` in frontend directory
-2. Commit the `frontend/out/` directory
-3. Push to repository - GitHub Pages will serve from this directory
+### Troubleshooting
+
+#### Build Errors
+- Clear `.next` directory: `rm -rf frontend/.next`
+- Reinstall dependencies: `rm -rf node_modules && npm install`
+- Check for TypeScript errors: `npm run lint`
+
+#### GitHub Pages Issues
+- Ensure `basePath` matches repository name
+- Verify `out/` directory is committed
+- Check GitHub Pages settings in repository
+- Wait 5-10 minutes for changes to propagate
+
+#### Image Loading Issues
+- Verify image paths include base path
+- Check that images exist in `public/images/`
+- Ensure `unoptimized: true` in next.config.ts
+
+## Project Maintenance
+
+### Regular Tasks
+1. Update dependencies monthly
+2. Review and update TypeScript types
+3. Monitor GitHub Pages build status
+4. Check for security vulnerabilities with `npm audit`
+
+### Before Major Changes
+1. Create a feature branch
+2. Test thoroughly in development
+3. Build and verify static export
+4. Test on GitHub Pages preview if available
+
+## Additional Resources
+- [Next.js Static Exports](https://nextjs.org/docs/app/building-your-application/deploying/static-exports)
+- [GitHub Pages Documentation](https://docs.github.com/en/pages)
+- [FastAPI Documentation](https://fastapi.tiangolo.com/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)

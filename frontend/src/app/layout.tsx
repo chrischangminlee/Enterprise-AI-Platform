@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Chris Chang Min Lee&apos;s AI Insights",
+  title: "Enterprise AI Insights Platform",
   description: "AI와 함께하는 일상을 준비하는 AI 정보 Insights Platform",
 };
 
@@ -34,7 +34,7 @@ export default function RootLayout({
           <div className="container mx-auto flex flex-col md:flex-row justify-between items-center py-4">
             <Link href="/" className="flex items-center mb-4 md:mb-0">
               <span className="text-white font-bold whitespace-nowrap">
-                <span className="text-lg sm:text-xl md:text-2xl">Chris Chang Min Lee&apos;s AI Insights</span>
+                <span className="text-lg sm:text-xl md:text-2xl">Enterprise AI Insights Platform</span>
               </span>
             </Link>
             <ul className="flex flex-wrap justify-center space-x-4">

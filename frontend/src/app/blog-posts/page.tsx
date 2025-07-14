@@ -21,19 +21,19 @@ const blogPosts: BlogPost[] = [
     image: "/Enterprise-AI-Platform/images/anya1.png"
   },
   {
-    title: "ChatGPT 활용 가이드",
-    description: "ChatGPT를 효과적으로 활용하는 방법과 프롬프트 엔지니어링 팁을 소개합니다.",
-    link: "https://tistory.com", // 실제 Tistory 링크로 교체 필요
-    date: "2024-01-10",
-    category: "AI 도구",
+    title: "노트북LM NotebookLM 사용법 – 구글 AI 노트 정리 비서",
+    description: "복잡한 자료도 똑똑하게 요약하고 정리해주는 AI 리서치 도우미",
+    link: "https://changminiai.tistory.com/entry/%EA%B5%AC%EA%B8%80-%EB%85%B8%ED%8A%B8%EB%B6%81LM-%EC%82%AC%EC%9A%A9%EB%B2%95-%EC%9D%BC%EC%9E%98%EB%9F%AC%EC%99%80-%ED%8C%8C%EC%9B%8CJ%EB%A5%BC-%EC%9C%84%ED%95%9C-%ED%95%84%EC%88%98-AI-%EB%8F%84%EA%B5%AC", 
+    date: "2024-02-22",
+    category: "AI 실무",
     image: "/Enterprise-AI-Platform/images/anya1.png"
   },
   {
-    title: "머신러닝 기초 개념",
-    description: "머신러닝의 기본 개념과 실무 적용 사례를 쉽게 설명합니다.",
-    link: "https://tistory.com", // 실제 Tistory 링크로 교체 필요
-    date: "2024-01-05",
-    category: "기술 이해",
+    title: "힉스필드 Higgsfield AI – 누구나 쉽게 만드는 AI 영상 생성기",
+    description: "셀카 한 장이면 끝, 나만의 짧은 영상 콘텐츠를 만들어주는 AI 영상 비서",
+    link: "https://changminiai.tistory.com/entry/Higgsfield-%ED%9E%89%EC%8A%A4%ED%95%84%EB%93%9C-AI-%EC%82%AC%EC%9A%A9%EB%B2%95-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95-%EC%89%AC%EC%9A%B4-%EC%98%81%EC%83%81-%EC%83%9D%EC%84%B1-AI", 
+    date: "2024-04-10",
+    category: "AI 영상",
     image: "/Enterprise-AI-Platform/images/anya1.png"
   },
   {

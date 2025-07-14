@@ -57,11 +57,11 @@ export default function Home() {
         {/* Title Section */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
-            AI와 함께하는 일상을 준비하는<br className="hidden sm:block" />
-            AI 정보 Insights Platform
+            AI와 함께하는 기업을 준비하는<br className="hidden sm:block" />
+            Enterprise AI 정보 Insights Platform
           </h1>
           <p className="mt-4 text-base sm:text-lg text-gray-600">
-            다양한 채널을 통해 AI 인사이트를 공유합니다
+            다양한 채널을 통해 Enterprise AI 인사이트를 공유합니다
           </p>
         </div>
 
