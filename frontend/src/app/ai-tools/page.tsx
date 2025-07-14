@@ -13,19 +13,19 @@ interface Tool {
 // 샘플 Tools 데이터
 const tools: Tool[] = [
   {
-    title: "K-Actuarial AI Agent",
-    description: "계리사 실무 관련 질의응답 AI 시스템",
-    link: "https://kactuaryagent.streamlit.app/",
-    image: "/Enterprise-AI-Platform/images/news4.png",
-    imageAlt: "AI Agent Image",
+    title: "환각 최소화 AI PDF 분석 툴",
+    description: "기업 특화 환각 최소화 AI PDF 분석 툴",
+    link: "https://pdf-ai-analyzer-changminlee.streamlit.app/",
+    image: "/Enterprise-AI-Platform/images/PDF-AI-Tool-Image.png",
+    imageAlt: "PDF AI Tool Image",
     status: 'active'
   },
   {
     title: "K-Actuary 약관 정보 추출 AI Agent",
     description: "보험 약관 계리 모델링 정보 추출 AI",
     link: "https://kactuarypdf.streamlit.app/",
-    image: "/Enterprise-AI-Platform/images/news4.png",
-    imageAlt: "AI Agent Image",
+    image: "/Enterprise-AI-Platform/images/TnCExtract-Tool-Image.png",
+    imageAlt: "TnCExtract Tool Image",
     status: 'active'
   },
   {
