@@ -13,6 +13,22 @@ interface BlogPost {
 // 샘플 블로그 포스트 데이터
 const blogPosts: BlogPost[] = [
   {
+    title: "생성형 AI는 데이터 분석이 아닌 업무 계획, 실행, 검토에 더욱 적합하다",
+    description: "생성형 AI 활용에 대한 이해",
+    link: "https://changminiai.tistory.com/entry/%EA%B8%B0%EC%97%85-AI-%EB%8F%84%EC%9E%85-%EA%B0%80%EC%9D%B4%EB%93%9C-Enterprise-AI-%EC%83%9D%EC%84%B1%ED%98%95-AI%EB%8A%94-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%84%EC%84%9D%EC%9D%B4-%EC%95%84%EB%8B%8C-%EC%97%85%EB%AC%B4-%EA%B3%84%ED%9A%8D-%EC%8B%A4%ED%96%89-%EA%B2%80%ED%86%A0%EC%97%90-%EB%8D%94%EC%9A%B1-%EC%A0%81%ED%95%A9%ED%95%98%EB%8B%A4", 
+    date: "2025-07-20",
+    category: "기업 AI",
+    image: "/Enterprise-AI-Platform/images/LLM-Understand-Image.png"
+  },
+  {
+    title: "ERP 데이터의 재발견: 회사 ERP AI 도입을 통해 잠자는 자산을 깨우는 법",
+    description: "AI ERP 도입 가이드",
+    link: "https://changminiai.tistory.com/entry/%EA%B8%B0%EC%97%85-AI-%EB%8F%84%EC%9E%85-%EA%B0%80%EC%9D%B4%EB%93%9C-Enterprise-AI-ERP-%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%9D%98-%EC%9E%AC%EB%B0%9C%EA%B2%AC-%ED%9A%8C%EC%82%AC-ERP-AI-%EB%8F%84%EC%9E%85%EC%9D%84-%ED%86%B5%ED%95%B4-%EC%9E%A0%EC%9E%90%EB%8A%94-%EC%9E%90%EC%82%B0%EC%9D%84-%EA%B9%A8%EC%9A%B0%EB%8A%94-%EB%B2%95", 
+    date: "2025-07-17",
+    category: "기업 AI",
+    image: "/Enterprise-AI-Platform/images/AI-ERP-Image.png"
+  },
+  {
     title: "기업 활용 특성화 환각 최소화 AI PDF 분석 툴",
     description: "직접만든 환각 최소화 AI PDF 분석 툴",
     link: "https://changminiai.tistory.com/entry/%EA%B8%B0%EC%97%85-%ED%99%9C%EC%9A%A9%EC%97%90-%EC%B5%9C%EC%A0%81%ED%99%94%EB%90%9C-%EA%B3%B5%EC%A7%9C-AI-PDF-%EB%B6%84%EC%84%9D%EA%B8%B0-%EC%A7%81%EC%A0%91%EB%A7%8C%EB%93%A0-PDF-%ED%99%98%EA%B0%81-%EC%B5%9C%EC%86%8C%ED%99%94%EB%90%9C-%EC%82%AC%EC%9A%A9-%ED%95%84%EC%88%98-%EB%B6%84%EC%84%9D-%ED%88%B4-%EA%B3%B5%EC%9C%A0", 
