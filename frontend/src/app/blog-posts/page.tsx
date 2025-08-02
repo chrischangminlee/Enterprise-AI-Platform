@@ -13,6 +13,14 @@ interface BlogPost {
 // 샘플 블로그 포스트 데이터
 const blogPosts: BlogPost[] = [
   {
+    title: "AI Agent를 위한 ERP 구조: 명시적 기억과 사전 계산 통계",
+    description: "AI Agent를 위한 ERP 구조",
+    link: "https://changminiai.tistory.com/entry/%EA%B8%B0%EC%97%85-AI-%EB%8F%84%EC%9E%85-%EA%B0%80%EC%9D%B4%EB%93%9C-Enterprise-AI-AI-Agent%EB%A5%BC-%EC%9C%84%ED%95%9C-ERP-%EA%B5%AC%EC%A1%B0-%EB%AA%85%EC%8B%9C%EC%A0%81-%EA%B8%B0%EC%96%B5-Explicit-Memory%EA%B3%BC-%EC%82%AC%EC%A0%84-%EA%B3%84%EC%82%B0-%ED%86%B5%EA%B3%84Precomputed-Statistics-%EB%B3%B4%ED%97%98-%EC%83%81%ED%92%88%EA%B0%9C%EB%B0%9C-%EB%B3%B4%ED%97%98-%EA%B3%84%EB%A6%AC-AI-ERP-%EC%98%88%EC%8B%9C", 
+    date: "2025-08-02",
+    category: "기업 AI",
+    image: "/Enterprise-AI-Platform/images/AIAgentStructureBlogCover.png"
+  },
+  {
     title: "생성형 AI는 데이터 분석이 아닌 업무 계획, 실행, 검토에 더욱 적합하다",
     description: "생성형 AI 활용에 대한 이해",
     link: "https://changminiai.tistory.com/entry/%EA%B8%B0%EC%97%85-AI-%EB%8F%84%EC%9E%85-%EA%B0%80%EC%9D%B4%EB%93%9C-Enterprise-AI-%EC%83%9D%EC%84%B1%ED%98%95-AI%EB%8A%94-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%84%EC%84%9D%EC%9D%B4-%EC%95%84%EB%8B%8C-%EC%97%85%EB%AC%B4-%EA%B3%84%ED%9A%8D-%EC%8B%A4%ED%96%89-%EA%B2%80%ED%86%A0%EC%97%90-%EB%8D%94%EC%9A%B1-%EC%A0%81%ED%95%A9%ED%95%98%EB%8B%A4", 
