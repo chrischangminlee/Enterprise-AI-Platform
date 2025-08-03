@@ -13,6 +13,14 @@ interface Tool {
 // 샘플 Tools 데이터
 const tools: Tool[] = [
   {
+    title: "기업 AI LLM + Retrieval 맥락 DB제공 실험 플랫폼",
+    description: "맥락 제공과 사전계산통계를 제공하여 환각을 최소화하여 테스트한 기업 AI 데모",
+    link: "https://ai-native-erp.vercel.app/#/",
+    image: "/Enterprise-AI-Platform/images/LLM-Retrieval-Platform-Img.png",
+    imageAlt: "ai-native-erp image",
+    status: 'active'
+  },
+  {
     title: "환각 최소화 AI PDF 분석 툴",
     description: "기업 특화 환각 최소화 AI PDF 분석 툴",
     link: "https://pdf-ai-analyzer-changminlee.streamlit.app/",
