@@ -56,6 +56,14 @@ export default function RootLayout({
               </li>
               <li>
                 <Link
+                  href="/survey"
+                  className="text-white hover:text-gray-200 transition-colors duration-200"
+                >
+                  기업 서베이
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/blog-posts"
                   className="text-white hover:text-gray-200 transition-colors duration-200"
                 >

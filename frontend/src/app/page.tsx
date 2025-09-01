@@ -16,6 +16,12 @@ const navigationButtons: NavigationButton[] = [
     icon: "🤖",
   },
   {
+    title: "기업 서베이",
+    href: "/survey",
+    description: "기업 AI 설문 참여",
+    icon: "📊",
+  },
+  {
     title: "Blog Posts",
     href: "/blog-posts",
     description: "AI 인사이트 블로그",
@@ -41,12 +47,6 @@ const navigationButtons: NavigationButton[] = [
     description: "기업 AI 정보 오픈카톡방",
     icon: "💬",
     external: true,
-  },
-  {
-    title: "Coming Soon",
-    href: "#",
-    description: "준비중",
-    icon: "🔜",
   },
 ];
 
