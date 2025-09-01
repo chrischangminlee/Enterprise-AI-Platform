@@ -10,8 +10,8 @@ export default function SurveyPage() {
         <div className="bg-white rounded-xl shadow-sm p-6">
           <h2 className="text-lg sm:text-xl font-semibold mb-2">설문 안내</h2>
           <p className="text-gray-700 mb-4">
-            기업의 AI 활용에 대한 1분 설문에 참여하고, 결과 인사이트를 받아보세요. <br />            
-            아래 구글 폼을 작성해주시면 링크드인 메세지를 통해 1~2분 소요되는 설문조사를 진행합니다. <br />
+            기업의 AI 활용에 대한 1분 설문에 참여하고, 결과 인사이트를 받아보세요. <br /> <br />            
+            아래 구글 폼을 작성해주시면 링크드인 메세지를 통해 1~2분 소요되는 설문조사를 진행합니다. <br /> <br />
             참여해주신 분들께는 취합된 결과와 함께 향후 취합된 결과도 수시로 공유드립니다.
           </p>
           <div className="flex items-center justify-center">
