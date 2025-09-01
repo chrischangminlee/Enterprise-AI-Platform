@@ -59,7 +59,7 @@ export default function RootLayout({
                   href="/survey"
                   className="text-white hover:text-gray-200 transition-colors duration-200"
                 >
-                  기업 서베이
+                  기업 AI 설문조사
                 </Link>
               </li>
               <li>

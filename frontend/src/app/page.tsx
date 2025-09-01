@@ -16,9 +16,9 @@ const navigationButtons: NavigationButton[] = [
     icon: "🤖",
   },
   {
-    title: "기업 서베이",
+    title: "기업 AI 설문조사",
     href: "/survey",
-    description: "기업 AI 설문 참여",
+    description: "기업 AI 설문조사 정보",
     icon: "📊",
   },
   {

@@ -2,15 +2,16 @@ export default function SurveyPage() {
   return (
     <main className="min-h-screen p-4 sm:p-6 lg:p-8">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-center">기업 서베이</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-center">기업 AI 설문조사</h1>
         <p className="text-gray-600 text-center mb-8">
-          기업의 AI 활용 현황과 니즈를 파악하기 위한 서베이입니다.
+          기업의 AI 활용 현황과 니즈를 파악하고 나누기 위한 설문조사 입니다.
         </p>
 
         <div className="bg-white rounded-xl shadow-sm p-6">
           <h2 className="text-lg sm:text-xl font-semibold mb-2">설문 안내</h2>
           <p className="text-gray-700 mb-4">
-            곧 설문 링크가 공개될 예정입니다. 참여해 주시면 인사이트를 종합하여 공유드리겠습니다.
+            기업의 AI 활용에 대한 1분 설문에 참여하고, 결과 인사이트를 받아보세요. <br />            
+            아래 구글 폼을 작성해주시면 링크드인 메세지를 통해 1~2분 소요되는 설문조사를 진행합니다. 참여해주신 분들께는 취합된 결과와 함께 향후 취합된 결과에 대해서도 공유드립니다.
           </p>
           <div className="flex items-center justify-center">
             <button
