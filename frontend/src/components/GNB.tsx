@@ -12,7 +12,7 @@ type NavItem = {
 const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "AI Tools", href: "/ai-tools" },
-  { label: "기업 서베이", href: "/survey" },
+  { label: "기업 AI 설문조사", href: "/survey" },
   { label: "Blog Posts", href: "/blog-posts" },
   { label: "관리자 Linkedin", href: "https://www.linkedin.com/in/chrislee9407/", external: true },
   { label: "Youtube", href: "https://www.youtube.com/@EnterpriseAILab", external: true },
