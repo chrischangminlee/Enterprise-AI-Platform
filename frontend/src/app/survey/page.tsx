@@ -14,17 +14,15 @@ export default function SurveyPage() {
             참여해주신 분들께는 취합된 결과와 함께 향후 취합된 결과도 수시로 공유드립니다.
           </p>
           <div className="flex items-center justify-center">
-            <button
-              disabled
-              className="px-4 py-2 rounded-lg bg-gray-200 text-gray-500 cursor-not-allowed"
-              title="설문 링크가 준비중입니다"
+            <a
+              href="https://forms.gle/MPyw6dnBdzj1Q36Q7"
+              className="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white"
             >
-              설문 참여 (준비중)
-            </button>
+              설문 참여
+            </a>
           </div>
         </div>
       </div>
     </main>
   );
 }
-
