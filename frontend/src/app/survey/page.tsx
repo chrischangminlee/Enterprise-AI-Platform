@@ -16,6 +16,8 @@ export default function SurveyPage() {
           <div className="flex items-center justify-center">
             <a
               href="https://forms.gle/MPyw6dnBdzj1Q36Q7"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white"
             >
               설문 참여
