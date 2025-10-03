@@ -37,6 +37,14 @@ const tools: Tool[] = [
     status: 'active'
   },
   {
+    title: "AI PPT 팔레트 도우미",
+    description: "기본 색상을 고르면 AI가 프레젠테이션용 보조 색상 다섯 가지와 활용법을 추천해 드립니다.",
+    link: "https://ppt-color-palette-cm.vercel.app/",
+    image: "/Enterprise-AI-Platform/images/AI-Palette.png",
+    imageAlt: "AI PPT Palette Assistant",
+    status: 'active'
+  },
+  {
     title: "Coming Soon",
     description: "새로운 AI 도구가 준비중입니다",
     link: "#",
