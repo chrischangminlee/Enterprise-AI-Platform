@@ -13,6 +13,14 @@ interface Tool {
 // 샘플 Tools 데이터
 const tools: Tool[] = [
   {
+    title: "AI PPT 팔레트 도우미",
+    description: "기본 색상을 고르면 AI가 프레젠테이션용 보조 색상 다섯 가지와 활용법을 추천해 드립니다.",
+    link: "https://ppt-color-palette-cm.vercel.app/",
+    image: "/Enterprise-AI-Platform/images/AI-Palette.png",
+    imageAlt: "AI PPT Palette Assistant",
+    status: 'active'
+  },
+  {
     title: "기업 AI LLM + Retrieval 맥락 DB제공 실험 플랫폼",
     description: "맥락 제공과 사전계산통계를 제공하여 환각을 최소화하여 테스트한 기업 AI 데모",
     link: "https://ai-native-erp.vercel.app/#/",
@@ -34,14 +42,6 @@ const tools: Tool[] = [
     link: "https://kactuarypdf.streamlit.app/",
     image: "/Enterprise-AI-Platform/images/TnCExtract-Tool-Image.png",
     imageAlt: "TnCExtract Tool Image",
-    status: 'active'
-  },
-  {
-    title: "AI PPT 팔레트 도우미",
-    description: "기본 색상을 고르면 AI가 프레젠테이션용 보조 색상 다섯 가지와 활용법을 추천해 드립니다.",
-    link: "https://ppt-color-palette-cm.vercel.app/",
-    image: "/Enterprise-AI-Platform/images/AI-Palette.png",
-    imageAlt: "AI PPT Palette Assistant",
     status: 'active'
   },
   {
